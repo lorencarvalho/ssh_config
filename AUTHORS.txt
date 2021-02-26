@@ -4,3 +4,4 @@ Mark Nevill <nev@improbable.io>
 Sergey Lukjanov <me@slukjanov.name>
 Wayne Ashley Berry <wayneashleyberry@gmail.com>
 santosh653 <70637961+santosh653@users.noreply.github.com>
+Loren Carvalho <lorenc@hey.com>

@@ -448,7 +448,7 @@ type KV struct {
 	Value        string
 	Comment      string
 	hasEquals    bool
-	leadingSpace int // Space before the key. TODO handle spaces vs tabs.
+	LeadingSpace int // Space before the key. TODO handle spaces vs tabs.
 	position     Position
 }
 
@@ -467,7 +467,7 @@ func (k *KV) String() string {
 	if k.hasEquals {
 		equals = " = "
 	}
-	line := fmt.Sprintf("%s%s%s%s", strings.Repeat(" ", int(k.leadingSpace)), k.Key, equals, k.Value)
+	line := fmt.Sprintf("%s%s%s%s", strings.Repeat(" ", int(k.LeadingSpace)), k.Key, equals, k.Value)
 	if k.Comment != "" {
 		line += " #" + k.Comment
 	}
@@ -635,7 +635,7 @@ func init() {
 	}
 }
 
-func newConfig() *Config {
+func NewConfig() *Config {
 	return &Config{
 		Hosts: []*Host{
 			&Host{

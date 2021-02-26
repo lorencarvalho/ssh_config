@@ -149,7 +149,7 @@ func (p *sshParser) parseKV() sshParserStateFn {
 		Value:        val.val,
 		Comment:      comment,
 		hasEquals:    hasEquals,
-		leadingSpace: key.Position.Col - 1,
+		LeadingSpace: key.Position.Col - 1,
 		position:     key.Position,
 	}
 	lastHost.Nodes = append(lastHost.Nodes, kv)
@@ -175,7 +175,7 @@ func parseSSH(flow chan token, system bool, depth uint8) *Config {
 		}
 	}()
 
-	result := newConfig()
+	result := NewConfig()
 	result.position = Position{1, 1}
 	parser := &sshParser{
 		flow:          flow,
